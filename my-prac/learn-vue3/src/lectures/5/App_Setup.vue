@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<p>
-			{{counter}}
+			{{ counter }}
 		</p>
 		<p>
-			{{message}}
+			{{ message }}
 			asdasfas
 		</p>
 		<button @click="counter++">click!</button>
@@ -41,6 +41,4 @@ const increament = () => {
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

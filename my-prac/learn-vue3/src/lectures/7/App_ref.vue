@@ -1,30 +1,30 @@
 <template>
-  <div>
-    <p>{{ message }}</p>
-    <button v-on:click="addMessage">add 버튼</button>
-  </div>
+	<div>
+		<p>{{ message }}</p>
+		<button v-on:click="addMessage">add 버튼</button>
+	</div>
 </template>
 
 <script>
-import { reactive, ref } from 'vue'
+import { reactive, ref } from 'vue';
 
 export default {
-  setup() {
-    let message = ref('Hello vue!')
+	setup() {
+		let message = ref('Hello vue!');
 
-    const addMessage = () => {
-      message.value = message.value + '@'
-    }
+		const addMessage = () => {
+			message.value = message.value + '@';
+		};
 
-    console.log('message ', message)
-    console.log('message typeof ', typeof message)
+		console.log('message ', message);
+		console.log('message typeof ', typeof message.value);
 
-    return {
-      message,
-      addMessage
-    }
-  }
-}
+		return {
+			message,
+			addMessage
+		};
+	}
+};
 </script>
 
 <style lang="scss" scoped></style>
