@@ -5,7 +5,7 @@
 			inline event handler
 		</button>
 		<hr />
-		<!-- 키보드 이벤트 -->
+		<!-- 키보드 이벤트 어떤 키가 눌렸을까?-->
 		<input type="text" @keyup="onKeyupHandler" />
 	</div>
 </template>

@@ -4,7 +4,8 @@
 			Div 영역
 			<p @click="clickP">
 				P 영역
-				<span @click.stop="clickSpan"> span 영역 </span>
+				<!-- <span @click.stop="clickSpan"> span 영역 </span> -->
+				<span @click="clickSpan"> span 영역 </span>
 				<a href="https://www.naver.com" @click.prevent.stop="clickA">
 					a 영역
 				</a>
@@ -18,19 +19,19 @@ export default {
 	setup() {
 		const clickDiv = () => {
 			// 링크이동을 넣으면 여기까지 버블링 전파됨
-			location.href = 'https://www.naver.com';
+			// location.href = 'https://www.naver.com';
 			console.log('clickDiv');
 		};
 		const clickSpan = () => {
 			// 일반적으로 JS에서 이벤트 전파를 막는 메소드
 			// e.stopPropagation();
 			console.log('clickSpan');
-			alert('좋아요');
+			// alert('좋아요');
 		};
 		const clickP = () => {
 			console.log('clickP');
 		};
-		const clickA = () => {
+		const clickA = e => {
 			alert('어떤 기능');
 		};
 
