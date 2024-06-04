@@ -1,28 +1,26 @@
 <template>
 	<main>
 		<div class="container py-4">
-			<div class="container text-center">
-				<div class="row g-3">
-					<div class="col col-4"><AppCard></AppCard></div>
-					<div class="col col-4"><AppCard></AppCard></div>
-					<div class="col col-4"><AppCard></AppCard></div>
-					<div class="col col-4"><AppCard></AppCard></div>
-					<div class="col col-4"><AppCard></AppCard></div>
-					<div class="col col-4"><AppCard></AppCard></div>
-				</div>
-			</div>
+			<MyButton class="my-button" id="my-button" @click="sayHello"></MyButton>
+			<LabelInput :label="이름"></LabelInput>
 		</div>
 	</main>
 </template>
 
 <script>
-import AppCard from '@/components/AppCard.vue';
+import MyButton from './MyButton.vue';
+import LabelInput from './LabelInput.vue';
+
 export default {
 	components: {
-		AppCard
+		MyButton,
+		LabelInput
 	},
 	setup() {
-		return {};
+		const sayHello = () => {
+			alert('say Hello');
+		};
+		return { sayHello };
 	}
 };
 </script>
