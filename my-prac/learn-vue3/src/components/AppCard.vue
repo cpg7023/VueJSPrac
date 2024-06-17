@@ -17,7 +17,7 @@
 <script>
 import { ref, computed } from 'vue';
 export default {
-	setup({ slots }) {
+	setup(props, { slots }) {
 		const childMessage = ref('자식 메시지 임');
 
 		const hasFooter = computed(() => !!slots.footer);
