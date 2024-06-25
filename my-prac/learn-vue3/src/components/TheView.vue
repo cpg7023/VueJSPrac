@@ -1,19 +1,13 @@
 <template>
-	<main>
-		<ProvideInject></ProvideInject>
-	</main>
+	<div class="container py-4">
+		<!-- <TemplateRef></TemplateRef> -->
+		<ScriptSetup></ScriptSetup>
+	</div>
 </template>
 
-<script>
-import ProvideInject from './ProvideInject.vue';
-export default {
-	components: {
-		ProvideInject
-	},
-	setup() {
-		return {};
-	}
-};
+<script setup>
+import TemplateRef from './TemplateRef.vue';
+import ScriptSetup from './ScriptSetup.vue';
 </script>
 
 <style lang="scss" scoped></style>
